@@ -1,0 +1,55 @@
+.photoContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: auto;
+    gap: 1rem;
+    @include desktop-only {
+        display: grid;
+        grid-template-columns: (1fr 1fr 1fr);
+        width: 80%;
+    }
+}
+.photo{
+    margin: auto;
+    height: 20rem;
+    width: 100%;
+    border: 3px $color-secondary double;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+    }
+} 
+.photo1{
+    img{
+    object-position: center;
+}
+}
+.photo2{
+    img{
+    object-position: top;
+    }
+}
+
+.photo8{
+    img{
+        object-position: left;
+    }
+}
+.photo12{
+    img{
+        object-position: top;
+    }
+}
+.photo4{
+    img{
+        object-position: top;
+    }
+}
+
+
+   

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">  
+    <title>Restaurant Chez Vous - Saint-Berthevin</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html#home" class="logo">
+            <div class="logo__name">Chez-Vous !</div>
+            <div class="logo__text">Restaurant - St. Berthevin</div>
+        </a>
+        <div class="navbar__links">
+            <ul>
+                <li><a href="index.html#home">Accueil</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#vin">Vins</a></li>
+                <li><a href="index.html#info">Infos Pratiques</a></li>
+                <li><a href="index.html#galerie">Galerie</a></li>
+            </ul>
+        </div>
+        <img class="navbar__button" src="./images/iconeMenu.png" alt="Menu Principal"> 
+    </div>
+        
+<section class="carteDesVins">
+    <img src="/images/carteDesVins1.jpg" alt="Carte des Vins">
+    <img src="/images/carteDesVins2.jpg" alt="Carte des Vins">
+</section>
+    
+
+        <section class="message">
+           
+            <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+        </section>
+
+        <footer class="footer">
+            
+<p><a href="#">Infos légales<br>Crédits : Benjamin Vandamme (contact@jammin-dev.com) </a></p>
+
+        </footer>
+
+    </div>
+</body>
+    
+<script>
+        const navbar__button = document.querySelector(".navbar__button")
+        const navbar__links = document.querySelector(".navbar__links")
+ 
+        navbar__button.addEventListener('click',()=>{
+        navbar__links.classList.toggle('mobile-menu')
+        })
+        navbar__links.addEventListener('click',()=>{
+        navbar__links.classList.toggle('mobile-menu')
+        })
+        
+    </script>
+</html>

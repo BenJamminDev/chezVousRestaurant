@@ -1,0 +1,17 @@
+$color-primary: #061612;
+$color-secondary: #F5F5DC;
+
+$breakpoints: (
+    tablette: 600px,
+    desktop: 1000px
+);
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints,tablette)){
+        @content
+    }
+}
+@mixin desktop-only {
+    @media screen and (min-width:map-get($breakpoints,desktop)){
+        @content
+    }
+}

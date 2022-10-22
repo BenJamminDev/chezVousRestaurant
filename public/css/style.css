@@ -1,0 +1,542 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: #F5F5DC;
+}
+
+h1 {
+  color: #061612;
+  font-family: "Dancing Script", cursive;
+  font-size: 3.4rem;
+}
+
+h2 {
+  border-bottom: 3px double #F5F5DC;
+  color: #F5F5DC;
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 6.5rem;
+  width: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px double #061612;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #061612;
+}
+
+.section__heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1000px) {
+  .section__heading {
+    height: 70vh;
+  }
+}
+.section__heading::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.section__heading p {
+  font-size: 2rem;
+  text-align: justify;
+  padding: 5%;
+  font-weight: 200;
+}
+@media screen and (min-width: 1000px) {
+  .section__heading p {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+.section__text {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #F5F5DC;
+  width: 100vw;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  font-size: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 8px;
+  padding-top: 5px;
+}
+
+.header__button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/* CSS */
+.header__button {
+  background-color: rgba(245, 245, 220, 0.6);
+  border: 2px solid #061612;
+  border-radius: 30px;
+  box-shadow: rgba(6, 22, 18, 0.6) 4px 4px 0 0;
+  color: #061612;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.header__button:hover {
+  background-color: rgba(245, 245, 220, 0.8);
+}
+
+.header__button:active {
+  box-shadow: #061612 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 1290px) {
+  .header__button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+.navbar {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #061612;
+  border-bottom: 3px #F5F5DC double;
+}
+.navbar a {
+  color: #F5F5DC;
+}
+
+.navbar__links ul {
+  display: flex;
+}
+.navbar__links ul li {
+  margin: 0 2rem;
+  font-size: 1.1rem;
+}
+.navbar__links ul .active a {
+  font-weight: bolder;
+}
+
+.navbar__button {
+  display: none;
+  width: 35px;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    top: 0;
+    padding: 40px;
+  }
+  .navbar__button {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .logo {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+  .navbar__links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: beige;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: -100%;
+  }
+  .navbar__links ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar__links ul a {
+    color: #061612;
+  }
+  .navbar__links ul li {
+    margin: 25px 0;
+    font-size: 1.8rem;
+  }
+  .mobile-menu {
+    margin-left: 0;
+    transition: all 300ms ease-in-out;
+  }
+}
+.photoContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 95%;
+  margin: auto;
+  gap: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .photoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+  }
+}
+
+.photo {
+  margin: auto;
+  height: 20rem;
+  width: 100%;
+  border: 3px #F5F5DC double;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo1 img {
+  object-position: center;
+}
+
+.photo2 img {
+  object-position: top;
+}
+
+.photo8 img {
+  object-position: left;
+}
+
+.photo12 img {
+  object-position: top;
+}
+
+.photo4 img {
+  object-position: top;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/photoRestaurant3.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1000px) {
+  .header {
+    justify-content: start;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/IMG_5890.jpg);
+  }
+}
+.header__heading {
+  border: 3px double #061612;
+  margin-bottom: 5rem;
+  text-align: center;
+  width: 70%;
+  font-size: 2.3rem;
+  background-color: rgba(245, 245, 220, 0.65);
+  padding: 10px;
+  border-radius: 30px;
+}
+@media screen and (min-width: 1000px) {
+  .header__heading {
+    margin-top: 15rem;
+    margin-bottom: 9rem;
+    font-size: 3rem;
+    width: 50%;
+  }
+  .header__heading h1 {
+    font-size: 6rem;
+  }
+}
+
+.quote {
+  text-indent: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 4rem;
+  text-align: justify;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .quote {
+    width: 60%;
+  }
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/menu.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1000px) {
+  .menu {
+    background-image: url(/images/photoGallery11.jpg);
+  }
+}
+
+.menu__formule {
+  margin: auto;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  width: 85%;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 1000px) {
+  .menu__formule {
+    width: 70%;
+  }
+}
+.menu__formule p {
+  padding: 1.5rem;
+  border-bottom: 1px dashed #061612;
+}
+.menu__formule .petit {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.menu__button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 70%;
+  height: 6rem;
+}
+.menu__button img {
+  width: 6.5rem;
+}
+
+.vin {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/vin.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1000px) {
+  .vin {
+    background-image: url(/images/photoGallery4.jpg);
+  }
+}
+
+.vin__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.infoPratiques {
+  border-bottom: 3px #F5F5DC double;
+}
+.infoPratiques h2 {
+  color: #061612;
+  border-top: 4px double #061612;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+  font-size: 3.4rem;
+}
+.infoPratiques p {
+  padding: 1rem;
+}
+
+.infoPratiques__content {
+  width: 100vw;
+  background-color: #061612;
+  background-image: url(/images/infoPratiques4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 5rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .infoPratiques__content {
+    background-image: url(/images/photoGallery2.jpeg);
+    background-position: top;
+  }
+}
+
+.infoPratiques__item {
+  color: #F5F5DC;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.65);
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  width: 80%;
+  height: 80%;
+  color: #F5F5DC;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 10px;
+  border-radius: 30px;
+}
+.infoPratiques__item h3 {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-bottom: 4px double #F5F5DC;
+  margin-bottom: 1rem;
+}
+.infoPratiques__item p {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.infoPratiques__item a {
+  color: #F5F5DC;
+}
+
+.logoPhone {
+  width: 35px;
+}
+
+.logoClock {
+  width: 35px;
+}
+
+.logoPosition {
+  width: 30px;
+}
+
+.galerySection {
+  background-color: #F5F5DC;
+  padding-bottom: 5rem;
+}
+.galerySection h2 {
+  color: #061612;
+  margin-bottom: 5rem;
+}
+
+.message {
+  border-top: 3px #F5F5DC double;
+  color: #F5F5DC;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #061612;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px;
+  line-height: 30px;
+}
+
+.footer {
+  border-top: 3px #F5F5DC double;
+  color: #F5F5DC;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #061612;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px;
+}
+.footer a {
+  color: #F5F5DC;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.carteDesVins {
+  overflow-y: hidden;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.carteDesVins img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

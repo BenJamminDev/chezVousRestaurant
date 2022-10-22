@@ -1,0 +1,42 @@
+.header__button {
+    font-size: 1.5rem;
+    border-radius: 20px;
+    padding: 15px;
+}
+//<!-- HTML !-->
+//<button class="button-74" role="button">Button 74</button>
+
+/* CSS */
+.header__button {
+  background-color: rgba($color: #F5F5DC, $alpha: 0.6);
+  border: 2px solid $color-primary;
+  border-radius: 30px;
+  box-shadow: rgba($color: $color-primary, $alpha: 0.6) 4px 4px 0 0;
+  color: $color-primary;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.header__button:hover {
+  background-color: rgba($color: #F5F5DC, $alpha: 0.8);
+}
+
+.header__button:active {
+  box-shadow: $color-primary 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 1290px) {
+  .header__button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
